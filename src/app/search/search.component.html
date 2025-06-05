@@ -1,0 +1,8 @@
+<h2>Search Users</h2>
+<input type="text" [formControl]="searchInput" placeholder="Type of search...">
+
+<ul>
+    <li *ngFor="let item of results">
+        {{item.name}}
+    </li>
+</ul>
