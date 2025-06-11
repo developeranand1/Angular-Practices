@@ -1,0 +1,40 @@
+<h5>What is subscribe()?</h5>
+
+<ul>
+    <li>subscribe() is how you start listening to an Observable.</li>
+    <li>It activates the Observable (they are lazy, meaning they do nothing until subscribed).</li>
+    <li>You provide a function that will run whenever a new value is emitted.</li>
+</ul>
+<h5>What is unsubscribe()?</h5>
+<ul>
+    <li>unsubscribe() is used to stop listening to the Observable.</li>
+    <li>This is especially important for long-running Observables like:
+        <ul>
+            <li>interval, timer, event listeners, or websocket Observables</li>
+            <li>Component-based Observables (to avoid memory leaks)</li>
+        </ul>
+    </li>
+</ul>
+
+<h5>Why is it important?</h5>
+<p>If you don't unsubscribe from infinite or long-lived Observables, they keep running even after the component is
+    destroyed — causing:</p>
+
+<ul>
+    <li>Memory leaks</li>
+    <li>Unexpected behavior</li>
+</ul>
+
+<h4>Methods</h4>
+<ul>
+    <li><strong>subscribe() :</strong>Start receiving data from an Observable</li>
+    <li><strong>unsubscribe() :</strong>Stop receiving data, free resources</li>
+</ul>
+
+<h5> When do you need to unsubscribe?</h5>
+<ul>
+    <li>Yes: Infinite streams (interval, websocket, event, custom Observables)</li>
+    <li>No: One-time Observables (like HTTP calls) – Angular handles them automatically
+
+    </li>
+</ul>

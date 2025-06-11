@@ -1,1 +1,17 @@
-<app-search/>
+<div class="bg-color">
+ <div class="container-fluid">
+    <ul class="d-flex align-items-center list-unstyled">
+        <li *ngFor="let item of tabList" class=me-2 (click)="selectedTab(item.value)" style="cursor: pointer;"><a class="text-decoration-none">{{item.name}}</a></li>
+    </ul>
+    <div class="mt-3">
+        <app-search *ngIf="selected==='debounce'"/>
+        <app-subject *ngIf="selected==='subject'"/>
+        <app-decorator *ngIf="selected==='decorator'"/>
+        <app-pipe *ngIf="selected==='pipe'" />
+        <app-route-common *ngIf="selected==='route'" />
+        <app-rxjs *ngIf="selected==='rxjs'" />
+    </div>
+ </div>
+
+</div>
+

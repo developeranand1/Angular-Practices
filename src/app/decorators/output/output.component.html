@@ -1,0 +1,8 @@
+<h3>What is {{"@Output()?"}}</h3>
+<p>{{"@Output() "}}is used to send data or events from a child component to the parent, usually via EventEmitter.</p>
+   <app-input
+      [name]="parentName"
+      (message)="receiveMessage($event)">
+   </app-input>
+
+    <p>📨 Message from child: {{ childMessage }}</p>
