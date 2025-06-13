@@ -1,0 +1,69 @@
+<h5>1. What is a Closure in JavaScript?</h5>
+
+<p>
+    A closure is a function that has access to its own scope, the outer function's scope,
+    and the global scope even after the outer function has returned. Closures are created
+    every time a function is created in JavaScript.
+</p>
+
+<app-code-runner [initialCode]="closureExample"></app-code-runner>
+
+
+<h5> 2. What is the Event Loop in JavaScript?</h5>
+
+<p>The Event Loop is part of JavaScript's concurrency model. It allows non-blocking I/O by using a queue and loop. The
+    event loop picks up functions from the callback queue and pushes them into the call stack only when it's empty.</p>
+
+<h6> How it works:</h6>
+
+<ul>
+    <li>Call Stack executes code.</li>
+    <li>Web APIs handle async operations (like setTimeout or fetch).</li>
+    <li>Callback Queue stores ready callbacks.</li>
+    <li>Event Loop checks the stack and pushes queued callbacks when it's empty.</li>
+</ul>
+
+
+<h5> 3. What is the difference between == and ===?</h5>
+<p>== is the abstract equality operator that performs type coercion before comparing, while === is the strict equality
+    operator that does not perform type coercion.</p>
+
+<app-code-runner [initialCode]="q3"></app-code-runner>
+
+<h5>4. What are Promises and how do they work?</h5>
+
+<p>A Promise is an object representing the eventual completion or failure of an asynchronous operation. It has three
+    states: pending, fulfilled, and rejected.</p>
+<app-code-runner [initialCode]="q4"></app-code-runner>
+
+<p>Bonus: Mention async/await for cleaner syntax.</p>
+
+<h5>5. Explain this keyword in JavaScript.</h5>
+<p>The value of this depends on how a function is invoked. In the global scope, this refers to the window (or global in
+    Node). Inside a method, it refers to the object owning the method.</p>
+
+    <app-code-runner [initialCode]="q5"></app-code-runner>
+
+    <h5>6. Explain the concept of hoisting in JavaScript.</h5>
+    <p>Hoisting is JavaScript’s default behavior of moving declarations to the top of the current scope.</p>
+
+    <app-code-runner [initialCode]="q6"/>
+
+    <h6>Important:</h6>
+    <ul><li>var is hoisted (value undefined)</li>
+    <li>let and const are hoisted but not initialized (Temporal Dead Zone)</li></ul>
+
+    <h5>7. What are higher-order functions?</h5>
+    <p>A higher-order function:</p>
+    <ul>
+        <li>Takes one or more functions as arguments</li>
+        <li>Returns a function</li>
+    </ul>
+
+    <app-code-runner [initialCode]="q7"></app-code-runner>
+    <p>Also mention common JS HOFs like map, filter, and reduce.</p>
+
+    <h5> 8. Explain prototypal inheritance in JavaScript.</h5>
+    <p>JavaScript uses prototypes to share properties and methods.</p>
+
+    <app-code-runner [initialCode]="q8"></app-code-runner>

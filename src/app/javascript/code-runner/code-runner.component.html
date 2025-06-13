@@ -1,0 +1,9 @@
+<div class="container">
+    <h4>Code Editor</h4>
+<textarea [(ngModel)]="code" rows="10" class="code-box"></textarea>
+<br />
+<button class="btn btn-secondary" (click)="runCode()">Run</button>
+
+<h4>Output:</h4>
+<pre class="output-box">{{ output }}</pre>
+</div>

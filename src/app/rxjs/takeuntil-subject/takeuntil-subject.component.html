@@ -1,0 +1,19 @@
+<h4>What is takeUntil + Subject?</h4>
+<p>This is an RxJS pattern that lets you unsubscribe automatically when a component is destroyed.</p>
+
+<div>{{ data | json }}</div>
+<h5>"To manage unsubscriptions safely, I often use the takeUntil pattern with a Subject. I define a destroy$ observable
+    in the component, and I complete it in ngOnDestroy. Then I use pipe(takeUntil(this.destroy$)) in my observable
+    streams. This ensures subscriptions are automatically cleaned up when the component is destroyed, preventing memory
+    leaks."</h5>
+
+    <h6> Key Improvements:</h6>
+    <ul>
+        <li>Removed Subscription: You don’t need it since takeUntil handles the unsubscription.</li>
+        <li>Bound data to the template: Now {{ "{{ data | json }}"}} will display API data directly.</li>
+        <li>Implements OnInit and OnDestroy interfaces: This improves clarity and correctness.</li>
+    </ul>
+
+    <div>
+        "In this example, I used a Subject {{"void>"}} called destroy$ and the takeUntil operator to automatically unsubscribe from the HTTP observable when the component is destroyed. This avoids memory leaks without needing to store and manually unsubscribe from the Subscription."
+    </div>
